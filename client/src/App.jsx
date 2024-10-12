@@ -9,14 +9,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route element={<Login />} path="/" />
-        {/* <Route element={<PrivateRoute />}>
-            <Route element={<Dashboard />} path="/" />
-          </Route>
-          <Route element={<AuthRoute />}>
-            <Route element={<Login />} path="/login" />
-            <Route element={<Signup />} path="/signup" />
-          </Route> */}
+        {/* <Route element={<Login />} path="/" /> */}
+        <Route path="/" element={<PrivateRoute />}>
+          <Route element={<Dashboard />} path="/" />
+        </Route>
+        <Route path="/" element={<AuthRoute />}>
+          <Route element={<Login />} path="/login" />
+          <Route element={<Signup />} path="/signup" />
+        </Route>
       </Routes>
     </Router>
   );
